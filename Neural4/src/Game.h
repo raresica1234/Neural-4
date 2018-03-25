@@ -16,9 +16,14 @@ private:
 	float pieceWidth, pieceHeight;
 	float borderWidth, borderHeight;
 
+	int connectWidth = 7;
+	int connectHeight = 6;
+
 	char connectGrid[7 * 6];
 
 	bool player1 = true;
+
+	bool gameFinished = false;
 
 public:
 	Game();
@@ -31,4 +36,6 @@ public:
 	void DrawRect(float x, float y, float width, float height, Color color);
 
 	void DrawGrid();
+
+	void CheckGame();
 };
